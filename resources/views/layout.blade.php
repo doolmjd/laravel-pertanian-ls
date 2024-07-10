@@ -14,8 +14,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <style>
+        html,
         body {
-            background-color: #D6EFD8;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("{{ asset('bghaki1.jpg') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
         }
 
         .sidebar ul {
@@ -32,9 +42,8 @@
         .sidebar a {
             display: block;
             color: #000;
-            padding: 16px 16px 16px 16px;
+            padding: 16px;
             text-decoration: none;
-            /* background-color: #508D4E; */
         }
 
         .sidebar a.active {
@@ -52,15 +61,19 @@
             background-color: #508D4E;
             color: #D6EFD8;
             text-align: center;
-            padding: 8px 8px 8px 8px;
+            padding: 8px;
         }
 
-        .container {
+        body .container-fluid {
             margin-left: 15%;
-            padding: 16px 16px 8px 16px;
-            width: 100%;
+            padding: 16px;
+            background-color: rgba(185, 211, 185, 0.772);
+            width: 85%;
+            height: auto; /* Allow the container to grow with its content */
+            overflow-y: auto; /* Enable vertical scrolling if needed */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
         }
-
     </style>
 </head>
 
@@ -74,7 +87,7 @@
             <li><a href="/datas">Data</a></li>
         </ul>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         @yield('content')
     </div>
 
