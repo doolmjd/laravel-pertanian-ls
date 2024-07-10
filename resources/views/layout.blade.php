@@ -69,7 +69,7 @@
             padding: 16px;
             background-color: rgba(185, 211, 185, 0.772);
             width: 85%;
-            height: auto; /* Allow the container to grow with its content */
+            min-height: 100%;
             overflow-y: auto; /* Enable vertical scrolling if needed */
             box-sizing: border-box;
             /* Include padding in width calculation */
