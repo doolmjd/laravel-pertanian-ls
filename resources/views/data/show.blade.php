@@ -1,15 +1,15 @@
 @extends('layout')
-@section('title', 'Data');
+@section('title', 'Data')
 
 @section('content')
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <h5 class="card-title mt-2">
                         Entri
                     </h5>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createEntry">
+                    <button type="button" class="btn" style="background-color: #80AF81; color:white" data-bs-toggle="modal" data-bs-target="#createEntry">
                         + Tambah Entry
                     </button>
                 </div>
@@ -77,7 +77,7 @@
                     <h5 class="card-title mt-2">
                         Proyeksi
                     </h5>
-                    <a type="button" class="btn btn-primary" href="{{ route('datas.project', ['data' => $data->id]) }}">
+                    <a type="button" class="btn" style="background-color: #80AF81; color:white" href="{{ route('datas.project', ['data' => $data->id]) }}">
                         Hitung Proyeksi
                     </a>
                 </div>

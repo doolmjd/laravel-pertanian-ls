@@ -5,7 +5,7 @@ use App\Http\Controllers\EntryController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('datas.index');
+    return view('home');
 });
 
 Route::resource('datas', DataController::class);
