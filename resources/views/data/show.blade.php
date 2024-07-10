@@ -101,6 +101,9 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="row mt-4">
         <div class="col-lg">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
