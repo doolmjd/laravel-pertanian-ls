@@ -18,7 +18,7 @@
                         <thead>
                             <tr>
                                 <th>Tahun</th>
-                                <th>Populasi</th>
+                                <th>Pendapatan per kapita</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,13 +50,11 @@
                         @csrf
                         <div class="row">
                             <div class="col-lg">
-                                <label for="formNama" class="form-label">Tahun</label>
                                 <input type="number" class="form-control" id="formNama" placeholder="Tahun" name="year"
                                     required>
                             </div>
                             <div class="col-lg">
-                                <label for="formPopulasi" class="form-label">Populasi</label>
-                                <input type="number" class="form-control" id="formPopulasi" placeholder="Populasi"
+                                <input type="number" class="form-control" id="formPopulasi" placeholder="pendapatan per kapita"
                                     name="population" required>
                             </div>
                         </div>
@@ -86,7 +84,7 @@
                         <thead>
                             <tr>
                                 <th>Tahun</th>
-                                <th>Populasi</th>
+                                <th>Pendapatan per kapita</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -128,7 +126,7 @@
             data: {
                 labels: {{ $data->projections->pluck('year') }},
                 datasets: [{
-                    label: 'Populasi',
+                    label: 'pendapatan/kapita',
                     data: {{ $data->projections->pluck('population') }},
                     borderWidth: 1
                 }]

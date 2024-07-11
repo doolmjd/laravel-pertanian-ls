@@ -22,7 +22,7 @@
         }
 
         body {
-            background-image: url("{{ asset('bghaki1.jpg') }}");
+            /* background-image: url("{{ asset('bghaki1.jpg') }}"); */
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
