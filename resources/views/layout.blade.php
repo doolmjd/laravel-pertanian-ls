@@ -22,7 +22,7 @@
         }
 
         body {
-            /* background-image: url("{{ asset('bghaki1.jpg') }}"); */
+            background-image: url("{{ asset('bghaki.jpg') }}");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -33,7 +33,7 @@
             margin: 0;
             padding: 0;
             width: 15%;
-            background-color: #80AF81;
+            background-color: #E1AFD1;
             position: fixed;
             height: 100%;
             overflow: auto;
@@ -52,28 +52,46 @@
         }
 
         .sidebar a:hover:not(.active) {
-            background-color: #1A5319;
-            color: white;
+            background-color: #AD88C6;
+            color: #FFE6E6;
         }
 
         .sidebar h3 {
             display: block;
-            background-color: #508D4E;
-            color: #D6EFD8;
+            background-color: #7469B6;
+            color: #FFE6E6;
             text-align: center;
-            padding: 8px;
+            padding: 32px;
         }
 
-        body .container-fluid {
+        body .container-full {
             margin-left: 15%;
-            padding: 16px;
-            background-color: rgba(185, 211, 185, 0.772);
+            padding: 24px;
+            background-color: #ffe6e6e0;
             width: 85%;
             min-height: 100%;
-            overflow-y: auto; /* Enable vertical scrolling if needed */
+            text-align: justify;
+            overflow-y: auto;
             box-sizing: border-box;
-            /* Include padding in width calculation */
         }
+        .btn-primer {
+            background-color: #E1AFD1;
+            text-align: center;
+            color: black;
+            border-radius: 16px
+        }
+        .btn-primer:hover {
+            background-color: #7469B6;
+            text-align: center;
+            color: #FFE6E6;
+            border-radius: 16px
+        }
+        
+        .btn-full{
+            padding: 16px;
+            width: 100%;
+        }
+
     </style>
 </head>
 
@@ -81,13 +99,13 @@
     <div class="sidebar">
         <ul>
             <li>
-                <h3>Pendapatan Aritmatika</h3>
+                <h3>PDRB Industri</h3>
             </li>
             <li><a href="/">Home</a></li>
             <li><a href="/datas">Data</a></li>
         </ul>
     </div>
-    <div class="container-fluid">
+    <div class="container-full">
         @yield('content')
     </div>
 

@@ -9,7 +9,7 @@
                     <h5 class="card-title mt-2">
                         Entri
                     </h5>
-                    <button type="button" class="btn" style="background-color: #80AF81; color:white" data-bs-toggle="modal" data-bs-target="#createEntry">
+                    <button type="button" class="btn btn-primer"  data-bs-toggle="modal" data-bs-target="#createEntry">
                         + Tambah Entry
                     </button>
                 </div>
@@ -18,7 +18,7 @@
                         <thead>
                             <tr>
                                 <th>Tahun</th>
-                                <th>Pendapatan per kapita</th>
+                                <th>PDRB Industri</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -54,7 +54,7 @@
                                     required>
                             </div>
                             <div class="col-lg">
-                                <input type="number" class="form-control" id="formPopulasi" placeholder="pendapatan per kapita"
+                                <input type="number" class="form-control" id="formPopulasi" placeholder="PDRB Industri"
                                     name="population" required>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                     <h5 class="card-title mt-2">
                         Proyeksi
                     </h5>
-                    <a type="button" class="btn" style="background-color: #80AF81; color:white" href="{{ route('datas.project', ['data' => $data->id]) }}">
+                    <a type="button" class="btn btn-primer" href="{{ route('datas.project', ['data' => $data->id]) }}">
                         Hitung Proyeksi
                     </a>
                 </div>
@@ -84,7 +84,7 @@
                         <thead>
                             <tr>
                                 <th>Tahun</th>
-                                <th>Pendapatan per kapita</th>
+                                <th>PDRB Industri</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -126,9 +126,10 @@
             data: {
                 labels: {{ $data->projections->pluck('year') }},
                 datasets: [{
-                    label: 'pendapatan/kapita',
+                    label: 'PDRB Industri',
                     data: {{ $data->projections->pluck('population') }},
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: '#AD88C6',
                 }]
             },
             options: {

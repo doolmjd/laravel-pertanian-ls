@@ -9,7 +9,7 @@
                     <h5 class="card-title mt-2">
                         Data proyeksi anda
                     </h5>
-                    <a type="button" href="{{ route('datas.create') }}" class="btn" style="background-color: #80AF81; color:white">+ Tambah data baru</a>
+                    <a type="button" href="{{ route('datas.create') }}" class="btn btn-primer">+ Tambah data baru</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-striped table-secondary">
@@ -31,7 +31,7 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->description }}</td>
                                     <td><a href="{{ route('datas.show', ['data' => $item->id]) }}"
-                                            class="btn" style="background-color: #80AF81; color:white">Detail</a></td>
+                                            class="btn btn-primer">Detail</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
